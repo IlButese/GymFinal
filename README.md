@@ -30,7 +30,7 @@ GymExercises è un'API RESTful che consente di gestire un insieme di esercizi da
 
 ## Autenticazione
 
-- L'endpoint `POST /api/exercises` è **protetto** da autenticazione tramite **Token**.
+- L'endpoint `POST /api/post` è **protetto** da autenticazione tramite **Token**.
 - Per accedere a questo endpoint:
   - ottieni un token  valido  tramite `POST login /api/login` .
   - Inserisci il token nell'header `Authorization` della richiesta:
@@ -44,11 +44,11 @@ GymExercises è un'API RESTful che consente di gestire un insieme di esercizi da
 |--------|---------------------------|--------------------------------------------|
 | GET    | `/api/exercises`          | Restituisce la lista di tutti gli esercizi |
 | GET    | `/api/exercises/{id}`     | Restituisce i dettagli di un esercizio     |
-| POST   | `/api/exercises`          | Crea un nuovo esercizio                    |
-| PUT    | `/api/exercises/{id}`     | Aggiorna un esercizio esistente            |
-| DELETE | `/api/exercises/{id}`     | Elimina un esercizio tramite ID            |
-| LOGIN  | `/api/exercises/login`    | Accedi ad un Trainer                       |
-| SIGN-IN| `/api/exercises/signin`   | Crea un nuovo Trainer                      |
+| POST   | `/api/post`               | Crea un nuovo esercizio                    |
+| PUT    | `/api/put/{id}`           | Aggiorna un esercizio esistente            |
+| DELETE | `/api/delete/{id}`        | Elimina un esercizio tramite ID            |
+| LOGIN  | `/api/login`              | Accedi ad un Trainer                       |
+| SIGN-IN| `/api/signin`             | Crea un nuovo Trainer                      |
 
 ## Contenuti della Repository
 
@@ -59,6 +59,4 @@ GymExercises è un'API RESTful che consente di gestire un insieme di esercizi da
 
 ## Note
 - Assicurati che il xamp sia avviato prima di avviare il server.
-- Tutte le chiamate devono essere fatte su `http://localhost:{porta}/api/exercises` (sostituisci `{porta}` con la porta 8080).
-- L'endpoint protetto (POST) restituirà **401 Unauthorized** se non viene fornito un token valido.
 
